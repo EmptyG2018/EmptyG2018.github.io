@@ -7,10 +7,6 @@ on:
   push:
     branches: [master]
 
-# 设置执行权限
-permissions:
-  contents: write
-
 # 定义工作流
 jobs:
   # This workflow contains a single job called "build"
@@ -19,15 +15,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # 设置执行权限
+    permissions:
+      contents: write
+
     # 定义步骤
     steps:
       # 检出代码
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # 步骤：安装 Node.js 环境
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 16
 
       - run: npm install
       - run: npm run docs:build
@@ -36,5 +38,6 @@ jobs:
       - name: To Github Page
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
+
           publish_dir: ./docs/.vitepress/dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
