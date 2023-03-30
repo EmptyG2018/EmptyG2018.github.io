@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,N as t}from"./chunks/framework.cd9250a1.js";const v=JSON.parse('{"title":"NVM 安装使用流程教程win平台","description":"","frontmatter":{},"headers":[],"relativePath":"tutorial/nvm-install.md"}'),e={name:"tutorial/nvm-install.md"},o=t("",16),l=[o];function p(r,c,i,m,d,h){return a(),s("div",null,l)}const b=n(e,[["render",p]]);export{v as __pageData,b as default};
