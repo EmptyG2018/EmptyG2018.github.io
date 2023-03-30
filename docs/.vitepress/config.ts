@@ -68,7 +68,7 @@ export default defineConfig({
           link: "/tutorial/navigation",
         },
         {
-          text: 'NVM安装使用流程教程（window）',
+          text: 'NVM安装使用流程教程win平台',
           link: '/tutorial/nvm-install.md',
         }
       ],
